@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "custom";
+  src: local("grape_font") format("truetype");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  backdrop-filter: blur(100px);
+  transition: all ease 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
+.overlay > button {
+  float: right;
+  color: white;
+  padding: 10px;
+}
+
+.scrollTop {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+  backdrop-filter: blur(100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+  transform: scale(0);
+  transition: all ease-in-out 0.2s;
+}
+
+.scrollTop > button {
+  color: white;
+  padding: 15px;
+}
+
+.mainCon .section {
+  position: relative;
+  width: 100%;
+  color: white;
+  height: auto;
   min-height: 100vh;
+}
+
+.mainCon .section:nth-child(odd) {
+  background-color: #00abe1;
+}
+
+.mainCon .section:nth-child(even) {
+  background-color: #161f6d;
+}
+
+.mainCon .section:last-child {
+  background-color: black;
+}
+
+.mainCon .section:first-child {
+  min-height: 1000px;
+}
+
+/* Section 1 */
+
+.mainCon .section:first-child .layerContent {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  width: 600px;
+  height: 500px;
+  color: white;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: x-large;
+  word-spacing: 10px;
+}
+
+.mainCon .section:first-child .layerContent > div {
+  width: 100%;
+  height: 100%;
+}
+.mainCon .section:first-child .layerContent > div > p,
+h1 {
+  padding: 50px;
+  text-shadow: 0 0 10px black;
+}
+
+.mainCon .section:first-child .carsouel {
+  position: relative;
+  width: 100%;
+  background-color: #00abe1;
+  min-height: inherit;
+  overflow: hidden;
+}
+
+.mainCon .section:first-child .carsouel > img {
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease-in-out 1s;
+  opacity: 0;
+  padding: 10px;
+}
+
+/* Section 2 */
+
+.mainCon .section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.mainCon .section:nth-child(2) > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  box-shadow: 0 5px 5px white;
+}
+
+.mainCon .section:nth-child(2) > div:first-child > a {
+  text-decoration: none;
   color: white;
+  padding: 10px;
+  transition: all ease-in-out 0.1s;
 }
 
-.App-link {
-  color: #61dafb;
+.mainCon .section:nth-child(2) > div:first-child > a:hover,
+.servicesLinkActive {
+  background-color: white;
+  color: black !important;
+  border-radius: 0 0 5px 5px;
+  border-top: 5px solid #00abe1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mainCon .section:nth-child(2) > div:last-child {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 100px;
+}
+
+.mainCon .section:nth-child(2) > div:last-child > a {
+  width: 30%;
+  min-height: 200px;
+  margin: 10px;
+  float: right;
+  text-decoration: none;
+  color: black;
+  background: linear-gradient(45deg, #161f6d, white, #00abe1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.25s;
+  opacity: 0.5;
+}
+
+.mainCon .section:nth-child(2) > div:last-child > a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px black;
+  opacity: 1;
+}
+
+@media (max-width: 850px) {
+  .mainCon .section:first-child {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    min-width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mainCon .section:first-child .carsouel {
+    min-height: unset;
+    flex: 1;
+  }
+
+  .mainCon .section:first-child .layerContent {
+    margin-top: -100px;
+    position: relative;
+    bottom: unset;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 20px 20px 0 0;
+    justify-content: center;
+    flex: 1;
+    font-size: large;
+  }
+
+  .mainCon .section:first-child .layerContent > div {
+    height: unset;
+    width: unset;
+    max-width: 450px;
+    max-height: inherit;
+  }
+
+  .mainCon .section:first-child .layerContent > div > p,
+  h1 {
+    padding: 10px;
+    word-spacing: normal;
+  }
+  .mainCon .section:nth-child(2) > div:first-child {
+    box-shadow: unset;
+    justify-content: center;
+  }
+  .mainCon .section:nth-child(2) > div:first-child > a:hover,
+  .servicesLinkActive {
+    border: unset;
+    border-radius: 5px;
+  }
+  .mainCon .section:nth-child(2) > div:last-child {
+    padding: unset;
+  }
+  .mainCon .section:nth-child(2) > div:last-child > a {
+    width: 40%;
+    margin: 5px;
+    border: unset;
   }
 }

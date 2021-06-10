@@ -1,0 +1,61 @@
+.drawer {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .drawer {
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    max-width: 350px;
+    width: 0;
+    box-shadow: 10px 0 10px dimgray;
+    background-color: #161f6d;
+    border-radius: 0 30px 30px 0;
+    height: 100vh;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    z-index: 1000;
+  }
+
+  .drawer > div {
+    min-width: 200px;
+  }
+
+  .drawer > .d_top {
+    border-bottom: 1px solid white;
+    font-family: -webkit-pictograph;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .drawer > .d_top > h2 {
+    color: white;
+    padding: 10px;
+  }
+
+  .drawer > .d_top > button {
+    color: white;
+    font-size: xx-large;
+    height: 50px;
+  }
+
+  .drawer > .menu {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .drawer > .social {
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
