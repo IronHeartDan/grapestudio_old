@@ -118,58 +118,124 @@ function App() {
         <div className="section">
           <div>
             <h1>Our Services</h1>
-            <a
-              href="#"
+            <span
               className={serviceView == 1 ? "servicesLinkActive" : ""}
               onMouseOver={() => {
                 setService(1);
               }}
             >
               Mobile Development
-            </a>
-            <a
-              href="#"
+            </span>
+            <span
               className={serviceView == 2 ? "servicesLinkActive" : ""}
               onMouseOver={() => {
                 setService(2);
               }}
             >
               Website Development
-            </a>
-            <a
-              href="#"
+            </span>
+            <span
               className={serviceView == 3 ? "servicesLinkActive" : ""}
               onMouseOver={() => {
                 setService(3);
               }}
             >
               Web / Mobile App Design
-            </a>
-            <a
-              href="#"
+            </span>
+            <span
               className={serviceView == 4 ? "servicesLinkActive" : ""}
               onMouseOver={() => {
                 setService(4);
               }}
             >
-              eCommerce Solution
-            </a>
-            <a
-              href="#"
+              Graphic Designing
+            </span>
+            <span
               className={serviceView == 5 ? "servicesLinkActive" : ""}
               onMouseOver={() => {
                 setService(5);
               }}
             >
               Trending Technology
-            </a>
+            </span>
+            <span
+              className={serviceView == 6 ? "servicesLinkActive" : ""}
+              onMouseOver={() => {
+                setService(6);
+              }}
+            >
+              Others
+            </span>
           </div>
           <div>
-            <a href="#">One</a>
-            <a href="#">Two</a>
-            <a href="#">Three</a>
-            <a href="#">Four</a>
-            <a href="#">Five</a>
+            {(() => {
+              switch (serviceView) {
+                case 1:
+                  return (
+                    <>
+                      <a href="">One</a>
+                    </>
+                  );
+                  break;
+
+                case 2:
+                  return (
+                    <>
+                      <a href="">One</a>
+                      <a href="">Two</a>
+                    </>
+                  );
+                  break;
+
+                case 3:
+                  return (
+                    <>
+                      <a href="">One</a>
+                      <a href="">Two</a>
+                      <a href="">Three</a>
+                    </>
+                  );
+                  break;
+
+                case 4:
+                  return (
+                    <>
+                      <a href="">One</a>
+                      <a href="">Two</a>
+                      <a href="">Three</a>
+                      <a href="">Four</a>
+                    </>
+                  );
+                  break;
+
+                case 5:
+                  return (
+                    <>
+                      <a href="">One</a>
+                      <a href="">Two</a>
+                      <a href="">Three</a>
+                      <a href="">Four</a>
+                      <a href="">Five</a>
+                    </>
+                  );
+                  break;
+
+                case 6:
+                  return (
+                    <>
+                      <a href="">One</a>
+                      <a href="">Two</a>
+                      <a href="">Three</a>
+                      <a href="">Four</a>
+                      <a href="">Five</a>
+                      <a href="">Six</a>
+                    </>
+                  );
+                  break;
+                default:
+                  return null;
+              }
+            })()}
           </div>
         </div>
         <div className="section">
