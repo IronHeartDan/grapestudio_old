@@ -140,10 +140,15 @@ h1 {
   box-shadow: 0 5px 5px white;
 }
 
+.mainCon .section:nth-child(2) > div:first-child > h1 {
+  min-width: fit-content;
+}
+
 .mainCon .section:nth-child(2) > div:first-child > span {
   text-decoration: none;
   color: white;
   padding: 10px;
+  min-width: fit-content;
   transition: all ease-out 0.5s;
   cursor: pointer;
 }
@@ -210,17 +215,83 @@ h1 {
   flex-direction: row-reverse;
 }
 
-.service_con > div:nth-child(-n + 2) {
+/* .service_con > div:nth-child(-n + 2) {
   min-height: unset;
-}
+} */
 
 .service_con > div:nth-child(-n + 2) > div {
   flex: 1;
   height: inherit;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10px;
+}
+
+.service_con > div:nth-child(-n + 2) > div > div > div > h1 {
+  position: absolute;
+  padding: unset;
+  text-shadow: unset;
+  transform: translate(0%, -50%);
+  font-size: 2rem;
+}
+
+.service_con > div:nth-child(-n + 2) > div > div > div > h1:first-child {
+  color: transparent;
+  -webkit-text-stroke: 2px #161f6d;
+}
+
+.service_con > div:nth-child(-n + 2) > div > div > div > h1:nth-child(2) {
+  color: #161f6d;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      1% 46%,
+      13% 44%,
+      25% 53%,
+      39% 60%,
+      54% 57%,
+      63% 50%,
+      77% 46%,
+      96% 43%,
+      100% 44%,
+      99% 100%,
+      0% 99%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 54%,
+      18% 57%,
+      37% 58%,
+      49% 50%,
+      66% 41%,
+      82% 35%,
+      93% 34%,
+      100% 38%,
+      100% 99%,
+      1% 100%
+    );
+  }
+}
+
+.service_con > div:nth-child(-n + 2) > div > div > ul {
+  padding: 20px;
+}
+.service_con > div:nth-child(-n + 2) > div > button {
+  background-color: yellow;
+  border-radius: 5px;
+  color: black;
+  text-transform: capitalize;
+  min-width: 250px;
+}
+.service_con > div:nth-child(-n + 2) > div > button:hover {
+  box-shadow: 0 0 100px yellow;
 }
 
 .service_con > div:nth-child(-n + 2) > div:first-child {
@@ -256,6 +327,7 @@ h1 {
 
   .mainCon .section:nth-child(2) {
     flex-direction: column;
+    min-height: unset;
   }
 
   .mainCon .section:nth-child(2) > div:first-child {
@@ -348,7 +420,13 @@ h1 {
 
   .mainCon .section:nth-child(2) > div:first-child {
     flex-wrap: unset;
-    flex-direction: column;
+    overflow: auto;
+    flex-direction: unset;
+    justify-content: unset;
+    align-items: center;
+  }
+  .mainCon .section:nth-child(2) > div:first-child::-webkit-scrollbar {
+    display: none;
   }
 
   .mainCon .section:nth-child(2) > div:last-child > a {

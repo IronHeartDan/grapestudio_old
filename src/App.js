@@ -93,16 +93,38 @@ function App() {
               <div>
                 <div>
                   <div>
-                    <h1>Demo Servie Text Shown</h1>
+                    <div>
+                      <h1>Demo Servie Text Shown</h1>
+                      <h1>Demo Servie Text Shown</h1>
+                    </div>
                     <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
                     </ul>
                   </div>
+                  <Button>Let's Get Started!</Button>
                 </div>
                 <div>
                   <img src={svg1} alt="" />
@@ -113,14 +135,33 @@ function App() {
                   <div>
                     <h1>Demo Servie Text Shown</h1>
                     <ul>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
-                      <li>Item</li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
+                      <li>
+                        A big Demo Pice Of Text Just For The Sake Of Visual
+                        Purpouse!!
+                      </li>
                     </ul>
                   </div>
+                  <Button>Let's Get Started!</Button>
                 </div>
                 <div>
                   <img src={svg1} alt="" />
