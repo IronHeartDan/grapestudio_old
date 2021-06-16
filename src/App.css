@@ -42,6 +42,7 @@
   z-index: 1;
   transform: scale(0);
   transition: all ease-in-out 0.2s;
+  mix-blend-mode: difference;
 }
 
 .scrollTop > button {
@@ -65,12 +66,17 @@
   background-color: #161f6d;
 }
 
-.mainCon .section:last-child {
-  background-color: black;
-}
-
 .mainCon .section:first-child {
   min-height: 1000px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  color: white;
+  height: auto;
+  min-height: 100vh;
+  background-color: black;
 }
 
 /* Section 1 */
@@ -181,6 +187,70 @@ h1 {
   opacity: 1;
 }
 
+/* service_con */
+
+.service_con {
+  width: 100%;
+  height: auto;
+}
+
+.service_con > div:nth-child(odd) {
+  background-color: #00abe1;
+}
+
+.service_con > div:nth-child(even) {
+  background-color: #161f6d;
+}
+.service_con > div {
+  display: flex;
+  min-height: 100vh;
+}
+
+.service_con > div:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.service_con > div:nth-child(-n + 2) {
+  min-height: unset;
+}
+
+.service_con > div:nth-child(-n + 2) > div {
+  flex: 1;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.service_con > div:nth-child(-n + 2) > div:first-child {
+  color: white;
+  font-size: x-large;
+}
+
+.service_con > div:nth-child(-n + 2) > div:first-child > div {
+  padding: 2rem;
+}
+
+.service_con > div:nth-child(1) > div:nth-child(2) > img {
+  border-radius: 50px 0 0 50px;
+  box-shadow: 0 0 10px black;
+  background-color: white;
+}
+
+.service_con > div:nth-child(2) > div:nth-child(2) > img {
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 0 10px black;
+  background-color: white;
+}
+
+.service_con > div > div:nth-child(2) > img {
+  padding: 10px;
+  width: 100%;
+  backdrop-filter: blur(100px);
+  object-fit: contain;
+}
+
 @media (max-width: 1000px) {
   /* Section 2 */
 
@@ -188,13 +258,27 @@ h1 {
     flex-direction: column;
   }
 
+  .mainCon .section:nth-child(2) > div:first-child {
+    flex-wrap: wrap;
+    flex-direction: unset;
+  }
+
   .mainCon .section:nth-child(2) > div:last-child {
     padding: 10px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   .mainCon .section:nth-child(2) > div:last-child > a {
     width: 40%;
+  }
+
+  /* Services */
+  .service_con > div:nth-child(-n + 2) {
+    flex-direction: column;
+  }
+  .service_con > div:nth-child(-n + 2) > div:nth-child(2) > img {
+    border-radius: unset;
   }
 }
 
@@ -259,6 +343,11 @@ h1 {
   /* Section 2 */
 
   .mainCon .section:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .mainCon .section:nth-child(2) > div:first-child {
+    flex-wrap: unset;
     flex-direction: column;
   }
 
