@@ -208,7 +208,6 @@ h1 {
 }
 .service_con > div {
   display: flex;
-  min-height: 100vh;
 }
 
 .service_con > div:nth-child(2) {
@@ -229,12 +228,8 @@ h1 {
   padding: 10px;
 }
 
-.service_con > div:nth-child(-n + 2) > div > div > div > h1 {
-  position: absolute;
+.service_con > div:nth-child(-n + 2) > div > div > h1 {
   padding: unset;
-  text-shadow: unset;
-  transform: translate(0%, -50%);
-  font-size: 2rem;
 }
 
 .service_con > div:nth-child(-n + 2) > div > div > div > h1:first-child {
@@ -242,47 +237,6 @@ h1 {
   -webkit-text-stroke: 2px #161f6d;
 }
 
-.service_con > div:nth-child(-n + 2) > div > div > div > h1:nth-child(2) {
-  color: #161f6d;
-  animation: animate 4s ease-in-out infinite;
-}
-
-@keyframes animate {
-  0%,
-  100% {
-    clip-path: polygon(
-      1% 46%,
-      13% 44%,
-      25% 53%,
-      39% 60%,
-      54% 57%,
-      63% 50%,
-      77% 46%,
-      96% 43%,
-      100% 44%,
-      99% 100%,
-      0% 99%
-    );
-  }
-  50% {
-    clip-path: polygon(
-      0% 54%,
-      18% 57%,
-      37% 58%,
-      49% 50%,
-      66% 41%,
-      82% 35%,
-      93% 34%,
-      100% 38%,
-      100% 99%,
-      1% 100%
-    );
-  }
-}
-
-.service_con > div:nth-child(-n + 2) > div > div > ul {
-  padding: 20px;
-}
 .service_con > div:nth-child(-n + 2) > div > button {
   background-color: yellow;
   border-radius: 5px;

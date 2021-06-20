@@ -93,35 +93,14 @@ function App() {
               <div>
                 <div>
                   <div>
-                    <div>
-                      <h1>Demo Servie Text Shown</h1>
-                      <h1>Demo Servie Text Shown</h1>
-                    </div>
+                    <h1>Demo Servie Text Shown</h1>
                     <ul>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
+                      <li>One</li>
+                      <li>Two</li>
+                      <li>Three</li>
+                      <li>Four</li>
+                      <li>FIve</li>
+                      <li>Six</li>
                     </ul>
                   </div>
                   <Button>Let's Get Started!</Button>
@@ -135,30 +114,12 @@ function App() {
                   <div>
                     <h1>Demo Servie Text Shown</h1>
                     <ul>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
-                      <li>
-                        A big Demo Pice Of Text Just For The Sake Of Visual
-                        Purpouse!!
-                      </li>
+                      <li>One</li>
+                      <li>Two</li>
+                      <li>Three</li>
+                      <li>Four</li>
+                      <li>FIve</li>
+                      <li>Six</li>
                     </ul>
                   </div>
                   <Button>Let's Get Started!</Button>
@@ -168,7 +129,123 @@ function App() {
                 </div>
               </div>
               <div>
-                <h1>Three</h1>
+                <div>
+                  <h1>Our Services</h1>
+                  <span
+                    className={serviceView == 1 ? "servicesLinkActive" : ""}
+                    onClick={() => {
+                      setService(1);
+                    }}
+                  >
+                    Mobile Development
+                  </span>
+                  <span
+                    className={serviceView == 2 ? "servicesLinkActive" : ""}
+                    onClick={() => {
+                      setService(2);
+                    }}
+                  >
+                    Website Development
+                  </span>
+                  <span
+                    className={serviceView == 3 ? "servicesLinkActive" : ""}
+                    onClick={() => {
+                      setService(3);
+                    }}
+                  >
+                    Web / Mobile App Design
+                  </span>
+                  <span
+                    className={serviceView == 4 ? "servicesLinkActive" : ""}
+                    onClick={() => {
+                      setService(4);
+                    }}
+                  >
+                    Graphic Designing
+                  </span>
+                  <span
+                    className={serviceView == 5 ? "servicesLinkActive" : ""}
+                    onClick={() => {
+                      setService(5);
+                    }}
+                  >
+                    Trending Technology
+                  </span>
+                  <span
+                    className={serviceView == 6 ? "servicesLinkActive" : ""}
+                    onClick={() => {
+                      setService(6);
+                    }}
+                  >
+                    Others
+                  </span>
+                </div>
+                <div>
+                  {(() => {
+                    switch (serviceView) {
+                      case 1:
+                        return <Link to="/services">One</Link>;
+                        break;
+
+                      case 2:
+                        return (
+                          <>
+                            <Link to="/services">One</Link>
+                            <Link to="/services">Two</Link>
+                          </>
+                        );
+                        break;
+
+                      case 3:
+                        return (
+                          <>
+                            <Link to="/services">One</Link>
+                            <Link to="/services">Two</Link>
+                            <Link to="/services">Three</Link>
+                          </>
+                        );
+                        break;
+
+                      case 4:
+                        return (
+                          <>
+                            <Link to="/services">One</Link>
+                            <Link to="/services">Two</Link>
+                            <Link to="/services">Three</Link>
+                            <Link to="/services">Four</Link>
+                          </>
+                        );
+                        break;
+
+                      case 5:
+                        return (
+                          <>
+                            <Link to="/services">One</Link>
+                            <Link to="/services">Two</Link>
+                            <Link to="/services">Three</Link>
+                            <Link to="/services">Four</Link>
+                            <Link to="/services">Fve</Link>
+                          </>
+                        );
+                        break;
+
+                      case 6:
+                        return (
+                          <>
+                            <Link to="/services">One</Link>
+                            <Link to="/services">Two</Link>
+                            <Link to="/services">Three</Link>
+                            <Link to="/services">Four</Link>
+                            <Link to="/services">Fve</Link>
+                            <Link to="/services">Six</Link>
+                          </>
+                        );
+                        break;
+                      default:
+                        return null;
+                    }
+                  })()}
+                </div>
               </div>
             </div>
           </Route>
